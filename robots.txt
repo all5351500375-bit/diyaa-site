@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://example.com/sitemap.xml
+Sitemap: https://all5351500375-bit.github.io/diyaa-site/sitemap.xml
