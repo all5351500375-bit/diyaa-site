@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>اتصل بنا | ضياء — استوديو تحويل الملفات</title>
+<meta name="description" content="تواصل مع فريق ضياء عبر البريد الإلكتروني أو الهاتف أو واتساب لأي استفسار أو اقتراح.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://example.com/contact.html">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@600;800&family=Tajawal:wght@400;500;700&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#14181f; --surface:#1b212b; --border:#2c3444;
+    --accent:#e8a33d; --accent-2:#4fd1c5; --text:#f2efe9; --text-muted:#8890a0;
+  }
+  *{box-sizing:border-box;}
+  body{background:var(--bg); color:var(--text); font-family:'Tajawal',sans-serif; line-height:1.9; margin:0;}
+  h1{font-family:'Cairo',sans-serif;}
+  .mono{font-family:'JetBrains Mono',monospace; direction:ltr; unicode-bidi:embed; display:inline-block;}
+  header{display:flex; align-items:center; justify-content:space-between; padding:20px 6vw; border-bottom:1px solid var(--border);}
+  .brand{display:flex; align-items:center; gap:10px; font-size:20px; font-weight:800; font-family:'Cairo';}
+  .mark{width:30px; height:30px; border-radius:50%; background:conic-gradient(from 210deg, var(--accent), var(--accent-2), var(--accent));}
+  a{color:var(--accent);}
+  main{max-width:640px; margin:0 auto; padding:56px 6vw 60px; text-align:center;}
+  h1{font-size:30px; margin-bottom:10px;}
+  main > p{color:var(--text-muted); margin-bottom:40px;}
+  .cards{display:grid; gap:16px; grid-template-columns:1fr;}
+  @media(min-width:560px){ .cards{grid-template-columns:1fr 1fr 1fr;} }
+  .card{
+    background:var(--surface); border:1px solid var(--border); border-radius:14px;
+    padding:26px 16px; text-decoration:none; color:var(--text);
+    transition:.2s;
+  }
+  .card:hover{border-color:var(--accent); transform:translateY(-2px);}
+  .card .icon{font-size:26px; display:block; margin-bottom:10px;}
+  .card .label{color:var(--text-muted); font-size:13px; display:block; margin-bottom:6px;}
+  .card .value{font-size:15px; font-weight:700; word-break:break-word;}
+  footer{border-top:1px solid var(--border); padding:24px 6vw; text-align:center; color:var(--text-muted); font-size:13px; margin-top:56px;}
+</style>
+</head>
+<body>
+<header>
+  <div class="brand"><span class="mark"></span> ضياء</div>
+  <a href="index.html">عودة إلى الأداة</a>
+</header>
+<main>
+  <h1>اتصل بنا</h1>
+  <p>يسعدنا استقبال استفساراتك أو اقتراحاتك أو الإبلاغ عن أي مشكلة تقنية عبر إحدى القنوات التالية.</p>
+
+  <div class="cards">
+    <a class="card" href="mailto:aall0506641401@gmail.com">
+      <span class="icon">✉️</span>
+      <span class="label">البريد الإلكتروني</span>
+      <span class="value mono">aall0506641401@gmail.com</span>
+    </a>
+    <a class="card" href="tel:+966530500037">
+      <span class="icon">📞</span>
+      <span class="label">الهاتف</span>
+      <span class="value mono">0530 500 037</span>
+    </a>
+    <a class="card" href="https://wa.me/966530500037" target="_blank" rel="noopener">
+      <span class="icon">💬</span>
+      <span class="label">واتساب</span>
+      <span class="value mono">0530 500 037</span>
+    </a>
+  </div>
+</main>
+<footer>ضياء — استوديو تحويل ملفات محلي وخاص</footer>
+</body>
+</html>

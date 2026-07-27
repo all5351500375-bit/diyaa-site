@@ -1,0 +1,1216 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ضياء | تحويل الصور إلى PDF وتحويل صيغ الصور مجانًا بدون رفع للسيرفر</title>
+<meta name="description" content="أداة ضياء المجانية تحوّل صورك بين صيغ JPG وPNG وWebP وGIF وBMP وSVG وICO، وتجمع عدة صور في ملف PDF واحد — كل شيء يعمل داخل متصفحك مباشرة دون رفع أي ملف إلى أي خادم.">
+<meta name="keywords" content="تحويل صور, تحويل الى pdf, تحويل png الى jpg, تحويل webp, ضغط الصور, دمج صور في pdf, أداة مجانية, تحويل صور بدون رفع, خصوصية الصور, تحويل gif, تحويل bmp, تحويل svg, تحويل ico, ضغط jpg">
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+<meta name="author" content="ضياء">
+<meta name="theme-color" content="#e8a33d">
+<meta name="msapplication-TileColor" content="#e8a33d">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="ضياء">
+<meta name="application-name" content="ضياء">
+<meta name="format-detection" content="telephone=no">
+<link rel="canonical" href="https://github.com/all5351500375-bit/diyaa-site.git">
+
+<!-- Preconnect -->
+<link rel="dns-prefetch" href="https://fonts.googleapis.com">
+<link rel="dns-prefetch" href="https://fonts.gstatic.com">
+<link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+<link rel="preload" href="https://fonts.googleapis.com/css2?family=Cairo:wght@600;800&family=Tajawal:wght@400;500;700&family=JetBrains+Mono:wght@400;600&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cairo:wght@600;800&family=Tajawal:wght@400;500;700&family=JetBrains+Mono:wght@400;600&display=swap"></noscript>
+<link rel="prefetch" href="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js" as="script">
+<link rel="prefetch" href="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js" as="script">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='45' fill='%23e8a33d'/%3E%3C/svg%3E">
+<link rel="apple-touch-icon" sizes="180x180" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 180 180'%3E%3Crect width='180' height='180' rx='36' fill='%23161c26'/%3E%3Ccircle cx='90' cy='90' r='65' fill='%23e8a33d'/%3E%3Ctext x='90' y='115' font-size='90' text-anchor='middle' fill='%23161c26' font-family='Cairo'%3Eض%3C/text%3E%3C/svg%3E">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://github.com/all5351500375-bit/diyaa-site.git">
+<meta property="og:title" content="ضياء — استوديو تحويل الصور وملفات PDF بدون رفع">
+<meta property="og:description" content="حوّل صيغ الصور (JPG, PNG, WebP, GIF, BMP, SVG, ICO) وادمجها في PDF مجانًا، بالكامل داخل متصفحك، دون رفع أي ملف لأي خادم.">
+<meta property="og:locale" content="ar_SA">
+<meta property="og:image" content="https://github.com/all5351500375-bit/diyaa-site.git/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="أداة ضياء لتحويل الصور ودمجها في PDF">
+<meta property="og:site_name" content="ضياء">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="ضياء — استوديو تحويل الصور وملفات PDF بدون رفع">
+<meta name="twitter:description" content="حوّل صيغ الصور وادمجها في PDF مجانًا، بالكامل داخل متصفحك.">
+<meta name="twitter:image" content="https://github.com/all5351500375-bit/diyaa-site.git/og-image.jpg">
+<meta name="twitter:image:alt" content="أداة ضياء لتحويل الصور ودمجها في PDF">
+
+<!-- Schema.org — صادق وبدون بيانات مزيفة -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "name": "ضياء - استوديو تحويل الملفات",
+      "url": "https://github.com/all5351500375-bit/diyaa-site.git/",
+      "inLanguage": "ar"
+    },
+    {
+      "@type": "WebApplication",
+      "name": "ضياء - استوديو تحويل الملفات",
+      "applicationCategory": "MultimediaApplication",
+      "applicationSubCategory": "ImageConverter",
+      "operatingSystem": "Any",
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD", "availability": "https://schema.org/InStock" },
+      "description": "أداة مجانية تعمل بالكامل داخل المتصفح لتحويل صيغ الصور (JPG, PNG, WebP, GIF, BMP, SVG, ICO) ودمج الصور في ملف PDF واحد دون الحاجة لخادم خارجي.",
+      "url": "https://example.com/",
+      "image": "https://example.com/og-image.jpg",
+      "featureList": "تحويل الصيغ, دمج PDF, ضغط الصور, خصوصية تامة, بدون رفع",
+      "softwareVersion": "2.0",
+      "author": {
+        "@type": "Organization",
+        "name": "ضياء",
+        "email": "aall0506641401@gmail.com",
+        "telephone": "+966530500037",
+        "url": "https://example.com/"
+      }
+    },
+    {
+      "@type": "Organization",
+      "name": "ضياء",
+      "url": "https://example.com/",
+      "email": "aall0506641401@gmail.com",
+      "telephone": "+966530500037",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+966530500037",
+        "contactType": "customer service",
+        "availableLanguage": "Arabic"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "الرئيسية", "item": "https://example.com/" }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "هل تُرفع صوري إلى الإنترنت؟",
+          "acceptedAnswer": { "@type": "Answer", "text": "لا. المعالجة تتم بالكامل داخل متصفحك على جهازك، ولا يُرسل أي ملف إلى أي خادم." }
+        },
+        {
+          "@type": "Question",
+          "name": "ما الصيغ المدعومة للتحويل؟",
+          "acceptedAnswer": { "@type": "Answer", "text": "يمكنك تحويل JPG وPNG وWebP وGIF وBMP وSVG وICO إلى PNG أو JPG أو WebP أو GIF أو BMP أو AVIF، وكذلك دمج أي صور في ملف PDF واحد. صور iPhone (HEIC) مدعومة تجريبيًا في المتصفحات الحديثة. إذا المتصفح لا يدعم الصيغة المطلوبة، يُستخدم PNG كبديل تلقائي." }
+        },
+        {
+          "@type": "Question",
+          "name": "هل هناك حد لعدد الصور؟",
+          "acceptedAnswer": { "@type": "Answer", "text": "لا يوجد حد مفروض من الأداة، لكن الأداء يعتمد على إمكانيات جهازك عند التعامل مع أعداد كبيرة جدًا من الصور دفعة واحدة." }
+        },
+        {
+          "@type": "Question",
+          "name": "هل الأداة مجانية فعلًا؟",
+          "acceptedAnswer": { "@type": "Answer", "text": "نعم، الاستخدام مجاني بالكامل بدون حساب أو اشتراك." }
+        },
+        {
+          "@type": "Question",
+          "name": "هل يمكنني استخدام الأداة على الجوال؟",
+          "acceptedAnswer": { "@type": "Answer", "text": "نعم، الأداة متجاوبة بالكامل وتعمل على جميع المتصفحات الحديثة سواء على الجوال أو الكمبيوتر أو التابلت." }
+        }
+      ]
+    }
+  ]
+}
+</script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+
+<style>
+  :root{
+    --bg:#0f1319;
+    --surface:#161c26;
+    --surface-2:#1e2633;
+    --surface-3:#252f3f;
+    --border:#2c3547;
+    --accent:#e8a33d;
+    --accent-dim:#7a5c24;
+    --accent-2:#4fd1c5;
+    --text:#f0ece6;
+    --text-muted:#8a94a8;
+    --danger:#e0645a;
+    --success:#4fd1c5;
+    --warning:#f6ad55;
+    --radius:14px;
+    --shadow:0 4px 24px rgba(0,0,0,0.35);
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  html{scroll-behavior:smooth;}
+  body{
+    background:
+      radial-gradient(circle at 15% -5%, rgba(232,163,61,0.07), transparent 45%),
+      radial-gradient(circle at 85% 5%, rgba(79,209,197,0.05), transparent 50%),
+      var(--bg);
+    color:var(--text);
+    font-family:'Tajawal', sans-serif;
+    line-height:1.7;
+    min-height:100vh;
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3,.brand{font-family:'Cairo', sans-serif; line-height:1.3;}
+  .mono{font-family:'JetBrains Mono', monospace; direction:ltr; unicode-bidi:embed;}
+  a{color:var(--accent); text-decoration:none; transition:opacity .2s;}
+  a:hover{opacity:.85; text-decoration:underline;}
+  img{max-width:100%; height:auto;}
+
+  .skip-link{
+    position:absolute; top:-40px; left:0;
+    background:var(--accent); color:#1a1206; padding:8px 16px;
+    z-index:9999; font-weight:700; border-radius:0 0 8px 0;
+    transition:top .2s;
+  }
+  .skip-link:focus{top:0;}
+
+  header{
+    display:flex; align-items:center; justify-content:space-between;
+    padding:18px 5vw;
+    border-bottom:1px solid var(--border);
+    background:rgba(15,19,25,0.85);
+    backdrop-filter:blur(12px);
+    position:sticky; top:0; z-index:100;
+  }
+  .brand{display:flex; align-items:center; gap:10px; font-size:22px; font-weight:800;}
+  .brand .mark{
+    width:34px; height:34px; border-radius:50%;
+    background: conic-gradient(from 210deg, var(--accent), var(--accent-2), var(--accent));
+    box-shadow: 0 0 18px rgba(232,163,61,0.45);
+    flex-shrink:0;
+  }
+  header .tag{color:var(--text-muted); font-size:13px;}
+  nav[aria-label="breadcrumb"]{padding:12px 5vw 0; font-size:13px; color:var(--text-muted);}
+  nav[aria-label="breadcrumb"] a{color:var(--text-muted);}
+  nav[aria-label="breadcrumb"] a:hover{color:var(--accent);}
+
+  .hero{
+    text-align:center;
+    padding:56px 5vw 28px;
+  }
+  .hero h1{font-size:clamp(26px,4.2vw,44px); margin:0 0 14px; font-weight:800;}
+  .hero p{color:var(--text-muted); max-width:640px; margin:0 auto; font-size:16px;}
+  .hero .badges{display:flex; gap:10px; justify-content:center; margin-top:22px; flex-wrap:wrap;}
+  .badge{
+    border:1px solid var(--border); background:var(--surface);
+    padding:6px 14px; border-radius:999px; font-size:13px; color:var(--text-muted);
+  }
+  .badge b{color:var(--accent-2);}
+
+  main{max-width:920px; margin:0 auto; padding:0 5vw 60px;}
+
+  .tabs{display:flex; gap:6px; background:var(--surface); border:1px solid var(--border); border-radius:999px; padding:6px; margin:0 auto 28px; width:fit-content; flex-wrap:wrap; justify-content:center;}
+  .tab-btn{
+    border:none; background:transparent; color:var(--text-muted);
+    padding:10px 20px; border-radius:999px; font-family:'Tajawal'; font-size:15px; font-weight:700;
+    cursor:pointer; transition:.2s; white-space:nowrap;
+  }
+  .tab-btn:hover{color:var(--text);}
+  .tab-btn.active{background:var(--accent); color:#1a1206;}
+  .tab-btn:focus-visible{outline:2px solid var(--accent-2); outline-offset:2px;}
+
+  .panel{display:none; animation: fadeIn .35s ease;}
+  .panel.active{display:block;}
+  @keyframes fadeIn{from{opacity:0; transform:translateY(8px);} to{opacity:1; transform:translateY(0);}}
+
+  .dropzone{
+    position:relative;
+    border:2px dashed var(--border);
+    border-radius:var(--radius);
+    background:var(--surface);
+    padding:48px 20px;
+    text-align:center;
+    cursor:pointer;
+    overflow:hidden;
+    transition:border-color .25s, background .25s, transform .15s;
+  }
+  .dropzone:hover, .dropzone.drag{
+    border-color:var(--accent);
+    background:var(--surface-2);
+    transform:scale(1.005);
+  }
+  .dropzone:focus-within{border-color:var(--accent-2);}
+  .dropzone .icon{font-size:38px; margin-bottom:10px; display:block;}
+  .dropzone strong{color:var(--text); font-size:16px;}
+  .dropzone small{display:block; color:var(--text-muted); margin-top:6px; font-size:13px;}
+  .dropzone input{display:none;}
+
+  .scan-line{
+    position:absolute; inset-inline:0; top:0; height:2px;
+    background:linear-gradient(90deg, transparent, var(--accent), transparent);
+    box-shadow:0 0 14px 2px var(--accent);
+    opacity:0; pointer-events:none;
+  }
+  .dropzone.scanning .scan-line{
+    opacity:1;
+    animation: sweep 1.2s ease-in-out infinite;
+  }
+  @keyframes sweep{
+    0%{top:0;} 50%{top:100%;} 100%{top:0;}
+  }
+
+  .grid{
+    display:grid; grid-template-columns:repeat(auto-fill,minmax(130px,1fr));
+    gap:14px; margin:24px 0;
+  }
+  .thumb{
+    background:var(--surface); border:1px solid var(--border); border-radius:12px;
+    overflow:hidden; position:relative; animation: develop .5s ease both;
+    box-shadow:var(--shadow);
+  }
+  @keyframes develop{
+    from{opacity:0; filter:brightness(2) contrast(0.6); transform:scale(.96);}
+    to{opacity:1; filter:brightness(1) contrast(1); transform:scale(1);}
+  }
+  .thumb img{width:100%; height:100px; object-fit:cover; display:block;}
+  .thumb .meta{padding:8px 10px; font-size:12px; color:var(--text-muted);}
+  .thumb .meta .name{color:var(--text); display:block; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;}
+  .thumb .status{
+    position:absolute; top:8px; left:8px; font-size:11px;
+    background:rgba(0,0,0,.65); padding:3px 8px; border-radius:999px; color:var(--text-muted);
+    backdrop-filter:blur(4px);
+  }
+  .thumb .status.done{color:var(--success);}
+  .thumb .status.error{color:var(--danger);}
+  .thumb .remove{
+    position:absolute; top:8px; right:8px; width:24px; height:24px; border-radius:50%;
+    background:rgba(0,0,0,.65); color:#fff; border:none; cursor:pointer; font-size:13px; line-height:1;
+    display:flex; align-items:center; justify-content:center;
+    transition:background .2s, transform .15s; backdrop-filter:blur(4px);
+  }
+  .thumb .remove:hover{background:var(--danger); transform:scale(1.1);}
+  .thumb .remove:focus-visible{outline:2px solid var(--danger); outline-offset:2px;}
+  .thumb .dl-btn{
+    display:block; width:100%; margin-top:8px; background:var(--accent); color:#1a1206;
+    border:none; border-radius:6px; padding:6px 0; font-size:11px; font-weight:800;
+    font-family:'Tajawal'; cursor:pointer; transition:filter .15s;
+  }
+  .thumb .dl-btn:hover{filter:brightness(1.1);}
+
+  .controls{
+    display:flex; gap:16px; flex-wrap:wrap; align-items:end;
+    background:var(--surface); border:1px solid var(--border); border-radius:var(--radius);
+    padding:20px; margin-top:20px;
+  }
+  .field{display:flex; flex-direction:column; gap:6px; font-size:13px; color:var(--text-muted);}
+  select, input[type=range], input[type=number]{
+    background:var(--surface-2); color:var(--text); border:1px solid var(--border);
+    border-radius:8px; padding:9px 12px; font-family:'Tajawal'; font-size:14px;
+    transition:border-color .2s;
+  }
+  select:focus, input:focus{outline:none; border-color:var(--accent);}
+  .field.grow{flex:1; min-width:160px;}
+
+  .actions{display:flex; gap:10px; margin-top:20px; flex-wrap:wrap;}
+  button.primary, button.secondary, button.ghost{
+    font-family:'Tajawal'; font-weight:700; font-size:15px;
+    padding:12px 24px; border-radius:10px; border:none; cursor:pointer; transition:.15s;
+    display:inline-flex; align-items:center; gap:6px;
+  }
+  button.primary{background:var(--accent); color:#1a1206;}
+  button.primary:hover{filter:brightness(1.1); transform:translateY(-1px);}
+  button.primary:disabled{background:var(--accent-dim); color:#5a4527; cursor:not-allowed; transform:none; filter:none;}
+  button.secondary{background:transparent; color:var(--text); border:1px solid var(--border);}
+  button.secondary:hover{border-color:var(--accent-2); background:var(--surface-2);}
+  button.secondary:disabled{opacity:.4; cursor:not-allowed;}
+  button.ghost{background:transparent; color:var(--text-muted); border:1px solid transparent;}
+  button.ghost:hover{color:var(--text);}
+  button:focus-visible{outline:2px solid var(--accent-2); outline-offset:2px;}
+
+  .progress-bar{
+    width:100%; height:4px; background:var(--surface-2); border-radius:2px; margin-top:12px; overflow:hidden; display:none;
+  }
+  .progress-bar.active{display:block;}
+  .progress-bar .fill{
+    height:100%; background:linear-gradient(90deg, var(--accent), var(--accent-2));
+    border-radius:2px; transition:width .3s ease; width:0%;
+  }
+
+  .toast{
+    position:fixed; bottom:24px; left:50%; transform:translateX(-50%) translateY(100px);
+    background:var(--surface-3); color:var(--text); padding:12px 24px; border-radius:10px;
+    border:1px solid var(--border); box-shadow:var(--shadow); z-index:200;
+    font-size:14px; opacity:0; transition:all .35s ease; pointer-events:none;
+    display:flex; align-items:center; gap:8px;
+  }
+  .toast.show{opacity:1; transform:translateX(-50%) translateY(0);}
+  .toast.error{border-color:var(--danger);}
+  .toast.success{border-color:var(--success);}
+  .toast.warning{border-color:var(--warning);}
+
+  .empty-note{color:var(--text-muted); font-size:13px; margin-top:10px; text-align:center;}
+
+  .features{
+    display:grid; grid-template-columns:repeat(auto-fit, minmax(220px, 1fr)); gap:20px;
+    margin:48px 0;
+  }
+  .feature-card{
+    background:var(--surface); border:1px solid var(--border); border-radius:var(--radius);
+    padding:24px; text-align:center; transition:transform .2s, border-color .2s;
+  }
+  .feature-card:hover{transform:translateY(-4px); border-color:var(--accent-dim);}
+  .feature-card .icon-f{font-size:32px; margin-bottom:12px;}
+  .feature-card h3{font-size:16px; margin-bottom:8px;}
+  .feature-card p{font-size:13px; color:var(--text-muted); margin:0;}
+
+  section.info{margin-top:56px;}
+  section.info h2{font-size:24px; margin-bottom:16px;}
+  section.info > p{color:var(--text-muted); margin-bottom:24px;}
+  .faq{border-top:1px solid var(--border);}
+  .faq details{border-bottom:1px solid var(--border); padding:16px 0;}
+  .faq summary{cursor:pointer; font-weight:700; list-style:none; font-size:15px; display:flex; align-items:center; justify-content:space-between;}
+  .faq summary::after{content:'▼'; font-size:11px; color:var(--text-muted); transition:transform .2s;}
+  .faq details[open] summary::after{transform:rotate(180deg);}
+  .faq summary::-webkit-details-marker{display:none;}
+  .faq p{color:var(--text-muted); margin:12px 0 0; font-size:14px; padding-right:4px;}
+
+  .format-tags{
+    display:flex; flex-wrap:wrap; gap:6px; justify-content:center; margin-top:12px;
+  }
+  .format-tag{
+    background:var(--surface-2); border:1px solid var(--border); border-radius:6px;
+    padding:3px 10px; font-size:11px; color:var(--text-muted); font-family:'JetBrains Mono', monospace;
+  }
+  .format-tag.experimental{
+    border-color:var(--warning);
+    color:var(--warning);
+  }
+
+  .ad-slot{
+    margin:40px 0; padding:16px; border:1px dashed var(--border); border-radius:10px;
+    text-align:center; color:var(--text-muted); font-size:12px; background:var(--surface);
+  }
+
+  footer{
+    border-top:1px solid var(--border); padding:32px 5vw; text-align:center;
+    color:var(--text-muted); font-size:13px;
+  }
+  footer .footer-links{
+    display:flex; gap:16px; justify-content:center; flex-wrap:wrap; margin-bottom:16px;
+  }
+  footer .footer-links a{color:var(--text-muted); font-size:13px;}
+  footer .footer-links a:hover{color:var(--accent);}
+  footer .contact-info{margin-top:12px; font-size:13px;}
+  footer .contact-info a{color:var(--accent-2);}
+
+  @media (prefers-reduced-motion: reduce){
+    .thumb{animation:none;} .scan-line{animation:none;} .panel{animation:none;}
+    html{scroll-behavior:auto;}
+  }
+  @media (max-width: 480px){
+    header{flex-direction:column; gap:8px; text-align:center;}
+    .hero{padding:36px 5vw 20px;}
+    .controls{flex-direction:column; align-items:stretch;}
+    .actions{flex-direction:column;}
+    button.primary, button.secondary{width:100%; justify-content:center;}
+  }
+</style>
+</head>
+<body>
+
+<a href="#main-content" class="skip-link">تخطي إلى المحتوى الرئيسي</a>
+
+<header>
+  <div class="brand" itemscope itemtype="https://schema.org/Organization">
+    <span class="mark" aria-hidden="true"></span>
+    <span itemprop="name">ضياء</span>
+  </div>
+  <div class="tag">استوديو تحويل ملفات يعمل بالكامل في متصفحك</div>
+</header>
+
+<nav aria-label="breadcrumb">
+  <ol itemscope itemtype="https://schema.org/BreadcrumbList" style="list-style:none; padding:0; margin:0; display:flex; gap:6px;">
+    <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+      <span itemprop="name">الرئيسية</span>
+      <meta itemprop="position" content="1">
+    </li>
+  </ol>
+</nav>
+
+<div class="hero">
+  <h1>حوّل صورك، ودمّجها في PDF، دون رفعها لأي خادم</h1>
+  <p>اسحب صورك وأفلتها، اختر الصيغة التي تريدها أو اجمعها في ملف PDF واحد، وحمّل النتيجة فورًا. كل المعالجة تتم محليًا داخل متصفحك.</p>
+  <div class="badges">
+    <div class="badge"><b>0%</b> رفع للسيرفر</div>
+    <div class="badge"><b>مجاني</b> بالكامل</div>
+    <div class="badge"><b>خصوصية</b> ملفاتك لا تغادر جهازك</div>
+  </div>
+  <div class="format-tags" aria-label="الصيغ المدعومة">
+    <span class="format-tag">JPG</span>
+    <span class="format-tag">PNG</span>
+    <span class="format-tag">WebP</span>
+    <span class="format-tag">GIF</span>
+    <span class="format-tag">BMP</span>
+    <span class="format-tag">SVG</span>
+    <span class="format-tag">ICO</span>
+    <span class="format-tag experimental" title="صور iPhone — يتطلب متصفح حديث">HEIC*</span>
+  </div>
+</div>
+
+<main id="main-content">
+  <div class="tabs" role="tablist" aria-label="أدوات التحويل">
+    <button class="tab-btn active" role="tab" aria-selected="true" aria-controls="panel-convert" id="tab-convert" data-tab="convert">تحويل صيغة الصور</button>
+    <button class="tab-btn" role="tab" aria-selected="false" aria-controls="panel-pdf" id="tab-pdf" data-tab="pdf">دمج الصور في PDF</button>
+  </div>
+
+  <!-- تحويل الصيغة -->
+  <div class="panel active" id="panel-convert" role="tabpanel" aria-labelledby="tab-convert">
+    <div class="dropzone" id="dz-convert" tabindex="0" role="button" aria-label="اختيار صور للتحويل">
+      <div class="scan-line" aria-hidden="true"></div>
+      <span class="icon" aria-hidden="true">🖼️</span>
+      <strong>اسحب الصور هنا أو اضغط للاختيار</strong>
+      <small>يدعم JPG, PNG, WebP, GIF, BMP, SVG, ICO — وHEIC تجريبيًا في المتصفحات الحديثة. التحويل إلى PNG, JPG, WebP, GIF, BMP, AVIF.</small>
+      <input type="file" id="input-convert" accept="image/*,.heic,.heif,.svg,.ico" multiple aria-label="اختيار ملفات الصور">
+    </div>
+
+    <div class="progress-bar" id="progress-convert" aria-hidden="true"><div class="fill" id="progress-fill-convert"></div></div>
+
+    <div class="grid" id="grid-convert"></div>
+    <p class="empty-note" id="empty-convert">لم تُضِف أي صور بعد.</p>
+
+    <div class="controls">
+      <div class="field">
+        <label for="target-format">الصيغة الهدف</label>
+        <select id="target-format" aria-label="اختيار صيغة الصورة المستهدفة">
+          <option value="image/png">PNG</option>
+          <option value="image/jpeg" selected>JPG</option>
+          <option value="image/webp">WebP</option>
+          <option value="image/gif">GIF</option>
+          <option value="image/bmp">BMP</option>
+          <option value="image/avif">AVIF (تجريبي)</option>
+        </select>
+      </div>
+      <div class="field grow">
+        <label for="quality">الجودة: <span id="quality-val" class="mono">85%</span></label>
+        <input type="range" id="quality" min="10" max="100" value="85" aria-label="ضبط جودة الصورة">
+      </div>
+      <div class="field">
+        <label for="max-dimension">أقصى عرض/ارتفاع (px)</label>
+        <input type="number" id="max-dimension" value="0" min="0" step="100" placeholder="بدون حد" style="width:130px;" aria-label="أقصى أبعاد للصورة، 0 يعني بدون حد">
+      </div>
+    </div>
+
+    <div class="actions">
+      <button class="primary" id="btn-convert" disabled>حوّل الصور</button>
+      <button class="secondary" id="btn-download-zip" disabled>تحميل الكل كـ ZIP</button>
+      <button class="secondary" id="btn-clear-convert" disabled>مسح الكل</button>
+    </div>
+  </div>
+
+  <!-- دمج PDF -->
+  <div class="panel" id="panel-pdf" role="tabpanel" aria-labelledby="tab-pdf">
+    <div class="dropzone" id="dz-pdf" tabindex="0" role="button" aria-label="اختيار صور لدمجها في PDF">
+      <div class="scan-line" aria-hidden="true"></div>
+      <span class="icon" aria-hidden="true">📄</span>
+      <strong>اسحب الصور هنا لدمجها في PDF واحد</strong>
+      <small>سيتم ترتيب الصور بحسب ترتيب إضافتها</small>
+      <input type="file" id="input-pdf" accept="image/*,.heic,.heif,.svg,.ico" multiple aria-label="اختيار ملفات الصور لملف PDF">
+    </div>
+
+    <div class="progress-bar" id="progress-pdf" aria-hidden="true"><div class="fill" id="progress-fill-pdf"></div></div>
+
+    <div class="grid" id="grid-pdf"></div>
+    <p class="empty-note" id="empty-pdf">لم تُضِف أي صور بعد.</p>
+
+    <div class="controls">
+      <div class="field">
+        <label for="page-size">حجم الصفحة</label>
+        <select id="page-size" aria-label="اختيار حجم صفحة PDF">
+          <option value="a4" selected>A4</option>
+          <option value="letter">Letter</option>
+          <option value="fit">بحجم الصورة نفسها</option>
+        </select>
+      </div>
+      <div class="field">
+        <label for="pdf-quality">جودة الصور في PDF</label>
+        <select id="pdf-quality" aria-label="جودة ضغط الصور داخل PDF">
+          <option value="0.85" selected>عالية (موصى بها)</option>
+          <option value="0.92">أعلى جودة</option>
+          <option value="0.7">متوسطة (حجم أصغر)</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="actions">
+      <button class="primary" id="btn-make-pdf" disabled>إنشاء PDF</button>
+      <button class="secondary" id="btn-clear-pdf" disabled>مسح الكل</button>
+    </div>
+  </div>
+
+  <div class="features">
+    <div class="feature-card">
+      <div class="icon-f" aria-hidden="true">🔒</div>
+      <h3>خصوصية تامة</h3>
+      <p>لا تُرفع صورك إلى أي خادم. كل المعالجة تتم داخل متصفحك فقط.</p>
+    </div>
+    <div class="feature-card">
+      <div class="icon-f" aria-hidden="true">⚡</div>
+      <h3>سريع ومباشر</h3>
+      <p>احصل على النتيجة فورًا دون انتظار تحميل أو معالجة على الخادم.</p>
+    </div>
+    <div class="feature-card">
+      <div class="icon-f" aria-hidden="true">🆓</div>
+      <h3>مجاني بالكامل</h3>
+      <p>بدون حساب، بدون اشتراك، وبدون قيود على عدد الاستخدامات.</p>
+    </div>
+    <div class="feature-card">
+      <div class="icon-f" aria-hidden="true">🖥️</div>
+      <h3>يعمل على كل الأجهزة</h3>
+      <p>متصفحك هو كل ما تحتاجه. يعمل على الجوال والكمبيوتر والتابلت.</p>
+    </div>
+  </div>
+
+  <div class="ad-slot">مساحة إعلانية — ضع هنا كود وحدة إعلانات AdSense بعد اعتماد حسابك</div>
+
+  <section class="info">
+    <h2>عن الأداة</h2>
+    <p>ضياء أداة تحويل ملفات تعمل بالكامل داخل المتصفح باستخدام تقنيات الويب القياسية (Canvas وJavaScript)، دون أي اتصال بخادم خارجي. هذا يعني أن صورك لا تُرفع لأي مكان، وتبقى خصوصيتك محفوظة، وتحصل على النتيجة بشكل فوري دون انتظار.</p>
+
+    <div class="faq">
+      <details>
+        <summary>هل تُرفع صوري إلى الإنترنت؟</summary>
+        <p>لا. المعالجة تتم بالكامل داخل متصفحك على جهازك، ولا يُرسل أي ملف إلى أي خادم. صورك تبقى خاصة بك 100%.</p>
+      </details>
+      <details>
+        <summary>ما الصيغ المدعومة للتحويل؟</summary>
+        <p>يمكنك تحويل JPG وPNG وWebP وGIF وBMP وSVG وICO إلى PNG أو JPG أو WebP أو GIF أو BMP أو AVIF، وكذلك دمج أي صور في ملف PDF واحد. صور iPhone (HEIC) مدعومة تجريبيًا في المتصفحات الحديثة. إذا المتصفح لا يدعم الصيغة المطلوبة، يُستخدم PNG كبديل تلقائي.</p>
+      </details>
+      <details>
+        <summary>هل هناك حد لعدد الصور؟</summary>
+        <p>لا يوجد حد مفروض من الأداة، لكن الأداء يعتمد على إمكانيات جهازك عند التعامل مع أعداد كبيرة جدًا من الصور دفعة واحدة. نوصي بـ 50 صورة كحد أقصى للحصول على أفضل أداء.</p>
+      </details>
+      <details>
+        <summary>هل الأداة مجانية فعلًا؟</summary>
+        <p>نعم، الاستخدام مجاني بالكامل بدون حساب أو اشتراك. نحن نؤمن بأن الأدوات الأساسية يجب أن تكون متاحة للجميع.</p>
+      </details>
+      <details>
+        <summary>هل يمكنني استخدام الأداة على الجوال؟</summary>
+        <p>نعم، الأداة متجاوبة بالكامل وتعمل على جميع المتصفحات الحديثة سواء على الجوال أو الكمبيوتر أو التابلت.</p>
+      </details>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="footer-links">
+    <a href="privacy-policy.html">سياسة الخصوصية</a>
+    <a href="terms.html">شروط الاستخدام</a>
+    <a href="contact.html">اتصل بنا</a>
+    <a href="sitemap.xml">خريطة الموقع</a>
+  </div>
+  <div>ضياء — استوديو تحويل ملفات محلي وخاص · جميع المعالجة تتم في متصفحك</div>
+  <div class="contact-info">
+    للتواصل: <a href="tel:+966530500037" dir="ltr">+966 53 050 0037</a> ·
+    <a href="mailto:aall0506641401@gmail.com">aall0506641401@gmail.com</a>
+  </div>
+</footer>
+
+<div class="toast" id="toast" role="status" aria-live="polite" aria-atomic="true"></div>
+
+<script src="https://cdn.jsdelivr.net/npm/heic2any@0.0.4/dist/heic2any.min.js"></script>
+
+<script>
+(function(){
+  'use strict';
+
+  const state = { convert: [], pdf: [] };
+  const MAX_FILES = 50;
+  const MAX_FILE_SIZE = 50 * 1024 * 1024; // 50MB
+
+  function bytesToSize(bytes){
+    if(!bytes) return '0 KB';
+    const kb = bytes / 1024;
+    return kb > 1024 ? (kb / 1024).toFixed(2) + ' MB' : Math.round(kb) + ' KB';
+  }
+
+  function showToast(msg, type){
+    const t = document.getElementById('toast');
+    t.textContent = msg;
+    t.className = 'toast ' + (type || '');
+    requestAnimationFrame(() => t.classList.add('show'));
+    setTimeout(() => t.classList.remove('show'), 3500);
+  }
+
+  // Warn before leaving with unsaved files
+  window.addEventListener('beforeunload', function(e){
+    const hasFiles = state.convert.length > 0 || state.pdf.length > 0;
+    if(hasFiles){
+      e.preventDefault();
+      e.returnValue = 'لديك ملفات في الأداة. هل أنت متأكد من المغادرة؟';
+      return e.returnValue;
+    }
+  });
+
+  function setupTabs(){
+    const buttons = document.querySelectorAll('.tab-btn');
+    buttons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        buttons.forEach(b => { b.classList.remove('active'); b.setAttribute('aria-selected', 'false'); });
+        document.querySelectorAll('.panel').forEach(p => p.classList.remove('active'));
+        btn.classList.add('active');
+        btn.setAttribute('aria-selected', 'true');
+        document.getElementById('panel-' + btn.dataset.tab).classList.add('active');
+      });
+    });
+  }
+
+  function setupDropzone(zoneId, inputId, onFiles){
+    const zone = document.getElementById(zoneId);
+    const input = document.getElementById(inputId);
+
+    zone.addEventListener('click', () => input.click());
+    zone.addEventListener('keydown', e => { if(e.key === 'Enter' || e.key === ' ') { e.preventDefault(); input.click(); } });
+    input.addEventListener('change', e => { onFiles([...e.target.files]); e.target.value = ''; });
+
+    ['dragenter','dragover'].forEach(ev => {
+      zone.addEventListener(ev, e => { e.preventDefault(); zone.classList.add('drag'); });
+    });
+    ['dragleave','drop'].forEach(ev => {
+      zone.addEventListener(ev, e => { e.preventDefault(); zone.classList.remove('drag'); });
+    });
+    zone.addEventListener('drop', e => {
+      const files = [...e.dataTransfer.files].filter(f => {
+        const name = f.name.toLowerCase();
+        return f.type.startsWith('image/') || name.endsWith('.heic') || name.endsWith('.heif') || name.endsWith('.svg') || name.endsWith('.ico');
+      });
+      if(files.length !== e.dataTransfer.files.length){
+        showToast('تم تجاهل الملفات غير الصورية', 'warning');
+      }
+      onFiles(files);
+    });
+  }
+
+  function validateFiles(files){
+    const valid = [];
+    for(const f of files){
+      const name = f.name.toLowerCase();
+      const isImage = f.type.startsWith('image/') || name.endsWith('.heic') || name.endsWith('.heif') || name.endsWith('.svg') || name.endsWith('.ico');
+      if(!isImage){
+        showToast('تم تجاهل: ' + f.name + ' (ليس ملف صورة)', 'error');
+        continue;
+      }
+      if(f.size > MAX_FILE_SIZE){
+        showToast('ملف كبير جدًا: ' + f.name, 'error');
+        continue;
+      }
+      valid.push(f);
+    }
+    return valid;
+  }
+
+  function escapeHtml(text){
+    const div = document.createElement('div');
+    div.textContent = text;
+    return div.innerHTML;
+  }
+
+  // Convert HEIC/HEIF to Blob using heic2any (loaded from CDN)
+  async function convertHeicToBlob(file){
+    if(typeof heic2any === 'undefined'){
+      throw new Error('مكتبة HEIC لم تحمل بعد. تأكد من اتصالك بالإنترنت.');
+    }
+    try{
+      const blob = await heic2any({ blob: file, toType: 'image/jpeg', quality: 0.92 });
+      return blob;
+    } catch(e){
+      throw new Error('فشل تحويل HEIC: ' + (e.message || 'خطأ غير معروف'));
+    }
+  }
+
+  // Convert SVG to Blob via canvas
+  async function convertSvgToBlob(file){
+    const text = await file.text();
+    const svgBlob = new Blob([text], {type: 'image/svg+xml'});
+    const url = URL.createObjectURL(svgBlob);
+    try{
+      const img = await loadImage(url);
+      URL.revokeObjectURL(url);
+      const canvas = document.createElement('canvas');
+      canvas.width = img.naturalWidth || 512;
+      canvas.height = img.naturalHeight || 512;
+      const ctx = canvas.getContext('2d');
+      ctx.drawImage(img, 0, 0);
+      return await canvasToBlob(canvas, 'image/png', 1.0);
+    } catch(e){
+      URL.revokeObjectURL(url);
+      throw new Error('فشل تحويل SVG: ' + e.message);
+    }
+  }
+
+  // Convert ICO to Blob via canvas
+  async function convertIcoToBlob(file){
+    const url = URL.createObjectURL(file);
+    try{
+      const img = await loadImage(url);
+      URL.revokeObjectURL(url);
+      const canvas = document.createElement('canvas');
+      canvas.width = img.naturalWidth || 256;
+      canvas.height = img.naturalHeight || 256;
+      const ctx = canvas.getContext('2d');
+      ctx.drawImage(img, 0, 0);
+      return await canvasToBlob(canvas, 'image/png', 1.0);
+    } catch(e){
+      URL.revokeObjectURL(url);
+      throw new Error('فشل تحويل ICO: ' + e.message);
+    }
+  }
+
+  // Generic canvas to blob with fallback
+  async function canvasToBlob(canvas, mimeType, quality){
+    return new Promise((resolve, reject) => {
+      canvas.toBlob(blob => {
+        if(blob) resolve(blob);
+        else{
+          // Fallback using toDataURL
+          try{
+            const dataUrl = canvas.toDataURL(mimeType, quality);
+            const byteString = atob(dataUrl.split(',')[1]);
+            const mimeString = dataUrl.split(',')[0].split(':')[1].split(';')[0];
+            const ab = new ArrayBuffer(byteString.length);
+            const ia = new Uint8Array(ab);
+            for(let i = 0; i < byteString.length; i++){
+              ia[i] = byteString.charCodeAt(i);
+            }
+            resolve(new Blob([ab], {type: mimeString}));
+          } catch(err){
+            reject(new Error('فشل إنشاء Blob من الصورة'));
+          }
+        }
+      }, mimeType, quality);
+    });
+  }
+
+  // Pre-process file to get a displayable image URL
+  async function preprocessFile(file){
+    const name = file.name.toLowerCase();
+
+    // HEIC/HEIF
+    if(file.type === 'image/heic' || file.type === 'image/heif' || name.endsWith('.heic') || name.endsWith('.heif')){
+      try{
+        const blob = await convertHeicToBlob(file);
+        return { url: URL.createObjectURL(blob), preprocessed: true, preBlob: blob };
+      } catch(e){
+        showToast(e.message, 'warning');
+        return { url: URL.createObjectURL(file), preprocessed: false };
+      }
+    }
+
+    // SVG
+    if(file.type === 'image/svg+xml' || name.endsWith('.svg')){
+      try{
+        const blob = await convertSvgToBlob(file);
+        return { url: URL.createObjectURL(blob), preprocessed: true, preBlob: blob };
+      } catch(e){
+        showToast(e.message, 'warning');
+        return { url: URL.createObjectURL(file), preprocessed: false };
+      }
+    }
+
+    // ICO
+    if(file.type === 'image/x-icon' || file.type === 'image/vnd.microsoft.icon' || name.endsWith('.ico')){
+      try{
+        const blob = await convertIcoToBlob(file);
+        return { url: URL.createObjectURL(blob), preprocessed: true, preBlob: blob };
+      } catch(e){
+        showToast(e.message, 'warning');
+        return { url: URL.createObjectURL(file), preprocessed: false };
+      }
+    }
+
+    // Standard image formats
+    return { url: URL.createObjectURL(file), preprocessed: false };
+  }
+
+  function renderGrid(key, gridId, emptyId){
+    const grid = document.getElementById(gridId);
+    const empty = document.getElementById(emptyId);
+    grid.innerHTML = '';
+    empty.style.display = state[key].length ? 'none' : 'block';
+    state[key].forEach((item, idx) => {
+      const div = document.createElement('div');
+      div.className = 'thumb';
+      div.setAttribute('role', 'listitem');
+      const showDownload = key === 'convert' && item.status === 'done' && item.blob;
+      const isError = item.status === 'error';
+      div.innerHTML = `
+        <span class="status ${item.status === 'done' ? 'done' : isError ? 'error' : ''}">${item.status === 'done' ? '✓ جاهز' : isError ? '✗ فشل' : bytesToSize(item.file.size)}</span>
+        <button class="remove" data-idx="${idx}" aria-label="إزالة ${item.file.name}">✕</button>
+        <img src="${item.url}" alt="معاينة ${item.file.name}" loading="lazy" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22100%22 height=%22100%22%3E%3Crect width=%22100%22 height=%22100%22 fill=%22%23161c26%22/%3E%3Ctext x=%2250%22 y=%2255%22 text-anchor=%22middle%22 fill=%22%238a94a8%22 font-size=%2212%22%3Eلا يمكن العرض%3C/text%3E%3C/svg%3E'">
+        <div class="meta">
+          <span class="name mono">${escapeHtml(item.file.name)}</span>
+          ${showDownload ? `<button class="dl-btn" data-idx="${idx}">⬇ تحميل الصورة</button>` : ''}
+        </div>
+      `;
+      grid.appendChild(div);
+    });
+    grid.querySelectorAll('.remove').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const i = +btn.dataset.idx;
+        URL.revokeObjectURL(state[key][i].url);
+        if(state[key][i].preBlob) URL.revokeObjectURL(state[key][i].preBlob);
+        state[key].splice(i, 1);
+        renderGrid(key, gridId, emptyId);
+        refreshButtons();
+      });
+    });
+    grid.querySelectorAll('.dl-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const i = +btn.dataset.idx;
+        const item = state[key][i];
+        if(!item || !item.blob) return;
+        const url = URL.createObjectURL(item.blob);
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = item.outName || item.file.name;
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+        setTimeout(() => URL.revokeObjectURL(url), 5000);
+      });
+    });
+  }
+
+  async function addFiles(key, files, gridId, emptyId){
+    const valid = validateFiles(files);
+    if(state[key].length + valid.length > MAX_FILES){
+      showToast('الحد الأقصى ' + MAX_FILES + ' صورة', 'error');
+      return;
+    }
+
+    for(const file of valid){
+      try{
+        const processed = await preprocessFile(file);
+        state[key].push({ 
+          file, 
+          url: processed.url, 
+          status: 'pending', 
+          blob: null,
+          preprocessed: processed.preprocessed,
+          preBlob: processed.preBlob || null
+        });
+      } catch(e){
+        showToast('خطأ في معالجة: ' + file.name, 'error');
+      }
+    }
+
+    renderGrid(key, gridId, emptyId);
+    refreshButtons();
+    if(valid.length > 0) showToast('تمت إضافة ' + valid.length + ' صورة', 'success');
+  }
+
+  function refreshButtons(){
+    const hasConvert = state.convert.length > 0;
+    document.getElementById('btn-convert').disabled = !hasConvert;
+    document.getElementById('btn-clear-convert').disabled = !hasConvert;
+    document.getElementById('btn-download-zip').disabled = !state.convert.some(i => i.status === 'done');
+
+    const hasPdf = state.pdf.length > 0;
+    document.getElementById('btn-make-pdf').disabled = !hasPdf;
+    document.getElementById('btn-clear-pdf').disabled = !hasPdf;
+  }
+
+  function setProgress(id, pct){
+    const bar = document.getElementById(id);
+    const fill = document.getElementById(id.replace('progress-', 'progress-fill-'));
+    if(pct > 0 && pct < 100) bar.classList.add('active');
+    else bar.classList.remove('active');
+    fill.style.width = pct + '%';
+  }
+
+  function loadImage(url){
+    return new Promise((res, rej) => {
+      const img = new Image();
+      img.onload = () => res(img);
+      img.onerror = () => rej(new Error('فشل تحميل الصورة'));
+      img.src = url;
+    });
+  }
+
+  function resizeCanvas(canvas, maxDim){
+    if(!maxDim || maxDim <= 0) return canvas;
+    const w = canvas.width, h = canvas.height;
+    if(w <= maxDim && h <= maxDim) return canvas;
+    const ratio = Math.min(maxDim / w, maxDim / h);
+    const nw = Math.round(w * ratio);
+    const nh = Math.round(h * ratio);
+    const c = document.createElement('canvas');
+    c.width = nw; c.height = nh;
+    const ctx = c.getContext('2d');
+    ctx.imageSmoothingEnabled = true;
+    ctx.imageSmoothingQuality = 'high';
+    ctx.drawImage(canvas, 0, 0, nw, nh);
+    return c;
+  }
+
+  // ---- تحويل الصيغة ----
+  setupDropzone('dz-convert', 'input-convert', files => addFiles('convert', files, 'grid-convert', 'empty-convert'));
+
+  document.getElementById('quality').addEventListener('input', e => {
+    document.getElementById('quality-val').textContent = e.target.value + '%';
+  });
+
+  // Map of target formats with their extensions and fallback chains
+  const FORMAT_MAP = {
+    'image/png':  { ext: 'png',  fallback: null },
+    'image/jpeg': { ext: 'jpg',  fallback: null },
+    'image/webp': { ext: 'webp', fallback: 'image/jpeg' },
+    'image/gif':  { ext: 'gif',  fallback: 'image/png' },
+    'image/bmp':  { ext: 'bmp',  fallback: 'image/png' },
+    'image/avif': { ext: 'avif', fallback: 'image/webp' }
+  };
+
+  // Check if browser can create a given format from canvas
+  async function canCreateFormat(format){
+    try{
+      const c = document.createElement('canvas');
+      c.width = 1; c.height = 1;
+      const blob = await new Promise(res => c.toBlob(res, format, 0.9));
+      return !!blob;
+    } catch(e){ return false; }
+  }
+
+  // Get the actual format to use, with fallback chain
+  async function resolveFormat(requestedFormat){
+    if(await canCreateFormat(requestedFormat)) return requestedFormat;
+    const info = FORMAT_MAP[requestedFormat];
+    if(!info || !info.fallback) return 'image/png'; // ultimate fallback
+    return resolveFormat(info.fallback);
+  }
+
+  document.getElementById('btn-convert').addEventListener('click', async () => {
+    const zone = document.getElementById('dz-convert');
+    const btn = document.getElementById('btn-convert');
+    zone.classList.add('scanning');
+    btn.disabled = true;
+    const requestedFormat = document.getElementById('target-format').value;
+    const quality = +document.getElementById('quality').value / 100;
+    const maxDim = +document.getElementById('max-dimension').value;
+    const total = state.convert.length;
+    let done = 0;
+    let usedFallback = false;
+
+    // Pre-resolve format once for all images (same browser = same support)
+    const actualFormat = await resolveFormat(requestedFormat);
+    if(actualFormat !== requestedFormat){
+      const reqName = FORMAT_MAP[requestedFormat]?.ext.toUpperCase() || requestedFormat;
+      const actName = FORMAT_MAP[actualFormat]?.ext.toUpperCase() || actualFormat;
+      showToast('متصفحك لا يدعم ' + reqName + ' — استُخدم ' + actName + ' بديلاً', 'warning');
+      usedFallback = true;
+    }
+
+    for(const item of state.convert){
+      try{
+        const sourceUrl = item.preBlob ? URL.createObjectURL(item.preBlob) : item.url;
+        const img = await loadImage(sourceUrl);
+        if(item.preBlob) URL.revokeObjectURL(sourceUrl);
+
+        const canvas = document.createElement('canvas');
+        canvas.width = img.naturalWidth;
+        canvas.height = img.naturalHeight;
+        const ctx = canvas.getContext('2d');
+        if(actualFormat === 'image/jpeg'){
+          ctx.fillStyle = '#ffffff';
+          ctx.fillRect(0, 0, canvas.width, canvas.height);
+        }
+        ctx.drawImage(img, 0, 0);
+
+        const finalCanvas = resizeCanvas(canvas, maxDim);
+
+        let blob = await canvasToBlob(finalCanvas, actualFormat, quality);
+
+        if(!blob){
+          blob = await canvasToBlob(finalCanvas, 'image/png', 1.0);
+          item.outName = item.file.name.replace(/\.[^.]+$/, '') + '.png';
+        } else {
+          item.outName = item.file.name.replace(/\.[^.]+$/, '') + '.' + (FORMAT_MAP[actualFormat]?.ext || 'png');
+        }
+        item.blob = blob;
+        item.status = 'done';
+      } catch(err){
+        console.error(err);
+        showToast('خطأ في تحويل: ' + item.file.name, 'error');
+        item.status = 'error';
+      }
+      done++;
+      setProgress('progress-convert', Math.round((done / total) * 100));
+      renderGrid('convert', 'grid-convert', 'empty-convert');
+    }
+    zone.classList.remove('scanning');
+    btn.disabled = false;
+    setProgress('progress-convert', 0);
+    refreshButtons();
+    if(state.convert.some(i => i.status === 'done')){
+      showToast('تم التحويل — اضغط ⬇ تحت كل صورة لتحميلها', 'success');
+    }
+  });
+
+  document.getElementById('btn-download-zip').addEventListener('click', async () => {
+    if(typeof JSZip === 'undefined'){
+      showToast('مكتبة ZIP غير محملة بعد، جرّب مرة أخرى', 'error');
+      return;
+    }
+    const zip = new JSZip();
+    const items = state.convert.filter(i => i.status === 'done');
+    items.forEach(i => { zip.file(i.outName, i.blob); });
+    try{
+      const content = await zip.generateAsync({type: 'blob', compression: 'DEFLATE', compressionOptions: {level: 6}});
+      const url = URL.createObjectURL(content);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = 'diyaa-converted.zip';
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+      setTimeout(() => URL.revokeObjectURL(url), 5000);
+      showToast('جاري التحميل...', 'success');
+    } catch(e){
+      showToast('فشل إنشاء ملف ZIP', 'error');
+    }
+  });
+
+  document.getElementById('btn-clear-convert').addEventListener('click', () => {
+    state.convert.forEach(i => {
+      URL.revokeObjectURL(i.url);
+      if(i.preBlob) URL.revokeObjectURL(i.preBlob);
+    });
+    state.convert = [];
+    renderGrid('convert', 'grid-convert', 'empty-convert');
+    refreshButtons();
+  });
+
+  // ---- دمج PDF ----
+  setupDropzone('dz-pdf', 'input-pdf', files => addFiles('pdf', files, 'grid-pdf', 'empty-pdf'));
+
+  document.getElementById('btn-make-pdf').addEventListener('click', async () => {
+    if(typeof window.jspdf === 'undefined' || !window.jspdf.jsPDF){
+      showToast('مكتبة PDF غير محملة بعد، جرّب مرة أخرى', 'error');
+      return;
+    }
+
+    const zone = document.getElementById('dz-pdf');
+    const btn = document.getElementById('btn-make-pdf');
+    zone.classList.add('scanning');
+    btn.disabled = true;
+    const { jsPDF } = window.jspdf;
+    const sizeChoice = document.getElementById('page-size').value;
+    const imgQuality = +document.getElementById('pdf-quality').value;
+    let doc = null;
+    const total = state.pdf.length;
+    let done = 0, added = 0;
+
+    for(let i = 0; i < state.pdf.length; i++){
+      try{
+        const item = state.pdf[i];
+        const sourceUrl = item.preBlob ? URL.createObjectURL(item.preBlob) : item.url;
+        const img = await loadImage(sourceUrl);
+        if(item.preBlob) URL.revokeObjectURL(sourceUrl);
+
+        const orientation = img.naturalWidth > img.naturalHeight ? 'l' : 'p';
+        let pageFormat, unit = 'mm';
+
+        if(sizeChoice === 'fit'){
+          const mmW = (img.naturalWidth / 96) * 25.4;
+          const mmH = (img.naturalHeight / 96) * 25.4;
+          pageFormat = [mmW, mmH];
+        } else {
+          pageFormat = sizeChoice;
+        }
+
+        if(!doc){
+          doc = new jsPDF({ orientation, unit, format: pageFormat });
+        } else {
+          doc.addPage(pageFormat, orientation);
+        }
+
+        const pageW = doc.internal.pageSize.getWidth();
+        const pageH = doc.internal.pageSize.getHeight();
+        let w = pageW, h = (img.naturalHeight / img.naturalWidth) * w;
+        if(h > pageH){ h = pageH; w = (img.naturalWidth / img.naturalHeight) * h; }
+        const x = (pageW - w) / 2, y = (pageH - h) / 2;
+
+        const canvas = document.createElement('canvas');
+        canvas.width = img.naturalWidth;
+        canvas.height = img.naturalHeight;
+        const ctx = canvas.getContext('2d');
+        ctx.drawImage(img, 0, 0);
+
+        // Handle transparency by compositing on white background
+        const imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
+        const hasTransparency = imageData.data.some((v, i) => i % 4 === 3 && v < 255);
+
+        let dataUrl;
+        if(hasTransparency){
+          const tempCanvas = document.createElement('canvas');
+          tempCanvas.width = canvas.width;
+          tempCanvas.height = canvas.height;
+          const tempCtx = tempCanvas.getContext('2d');
+          tempCtx.fillStyle = '#ffffff';
+          tempCtx.fillRect(0, 0, tempCanvas.width, tempCanvas.height);
+          tempCtx.drawImage(canvas, 0, 0);
+          dataUrl = tempCanvas.toDataURL('image/jpeg', imgQuality);
+        } else {
+          dataUrl = canvas.toDataURL('image/jpeg', imgQuality);
+        }
+
+        doc.addImage(dataUrl, 'JPEG', x, y, w, h);
+        added++;
+        item.status = 'done';
+      } catch(err){
+        console.error(err);
+        showToast('خطأ في معالجة صورة رقم ' + (i + 1), 'error');
+        state.pdf[i].status = 'error';
+      }
+      done++;
+      setProgress('progress-pdf', Math.round((done / total) * 100));
+      renderGrid('pdf', 'grid-pdf', 'empty-pdf');
+    }
+
+    if(added > 0){
+      try{
+        doc.save('diyaa-images.pdf');
+        showToast('تم إنشاء PDF بنجاح!', 'success');
+      } catch(e){
+        showToast('فشل حفظ PDF', 'error');
+      }
+    } else {
+      showToast('تعذر إنشاء PDF — لم تتم معالجة أي صورة بنجاح', 'error');
+    }
+    zone.classList.remove('scanning');
+    btn.disabled = false;
+    setProgress('progress-pdf', 0);
+  });
+
+  document.getElementById('btn-clear-pdf').addEventListener('click', () => {
+    state.pdf.forEach(i => {
+      URL.revokeObjectURL(i.url);
+      if(i.preBlob) URL.revokeObjectURL(i.preBlob);
+    });
+    state.pdf = [];
+    renderGrid('pdf', 'grid-pdf', 'empty-pdf');
+    refreshButtons();
+  });
+
+  setupTabs();
+})();
+</script>
+
+</body>
+</html>
