@@ -51,7 +51,7 @@
 <meta name="twitter:image" content="https://all5351500375-bit.github.io/diyaa-site/og-image.jpg">
 <meta name="twitter:image:alt" content="أداة ضياء لتحويل الصور ودمجها في PDF">
 
-<!-- Schema.org — صادق وبدون بيانات مزيفة -->
+<!-- Schema.org -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -395,9 +395,23 @@
     color:var(--warning);
   }
 
+  /* ===== Ad slot: responsive, fixed height to avoid layout jump ===== */
   .ad-slot{
-    margin:40px 0; padding:16px; border:1px dashed var(--border); border-radius:10px;
-    text-align:center; color:var(--text-muted); font-size:12px; background:var(--surface);
+    margin:30px auto;
+    padding:0;
+    border-radius:10px;
+    text-align:center;
+    background:var(--surface);
+    max-width:100%;
+    width:100%;
+    overflow:hidden;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    min-height:50px;
+  }
+  @media (min-width: 481px){
+    .ad-slot{ min-height:90px; }
   }
 
   footer{
@@ -579,16 +593,34 @@
     </div>
   </div>
 
-  <div class="ad-slot"><script>
-  atOptions = {
-    'key' : 'ce7c3b8373fcf9d33c338d92a365b46e',
-    'format' : 'iframe',
-    'height' : 60,
-    'width' : 468,
-    'params' : {}
-  };
-</script>
-<script src="https://www.highperformanceformat.com/ce7c3b8373fcf9d33c338d92a365b46e/invoke.js"></script></div>
+  <!-- ===== إعلان بانر متجاوب: 320x50 للجوال / 728x90 للكمبيوتر ===== -->
+  <div class="ad-slot" id="ad-banner"></div>
+  <script>
+  (function(){
+    var isMobile = window.matchMedia('(max-width: 480px)').matches;
+    var key = isMobile ? 'a776111998904da2443e9ccb1a4ad353' : 'ce7c3b8373fcf9d33c338d92a365b46e';
+    var w = isMobile ? 320 : 728;
+    var h = isMobile ? 50 : 90;
+
+    var container = document.getElementById('ad-banner');
+    var confScript = document.createElement('script');
+    confScript.type = 'text/javascript';
+    confScript.text =
+      'atOptions = {' +
+      "'key' : '" + key + "'," +
+      "'format' : 'iframe'," +
+      "'height' : " + h + "," +
+      "'width' : " + w + "," +
+      "'params' : {}" +
+      '};';
+    container.appendChild(confScript);
+
+    var invokeScript = document.createElement('script');
+    invokeScript.type = 'text/javascript';
+    invokeScript.src = 'https://www.highperformanceformat.com/' + key + '/invoke.js';
+    container.appendChild(invokeScript);
+  })();
+  </script>
 
   <section class="info">
     <h2>عن الأداة</h2>
@@ -659,7 +691,6 @@
     setTimeout(() => t.classList.remove('show'), 3500);
   }
 
-  // Warn before leaving with unsaved files
   window.addEventListener('beforeunload', function(e){
     const hasFiles = state.convert.length > 0 || state.pdf.length > 0;
     if(hasFiles){
@@ -732,7 +763,6 @@
     return div.innerHTML;
   }
 
-  // Convert HEIC/HEIF to Blob using heic2any (loaded from CDN)
   async function convertHeicToBlob(file){
     if(typeof heic2any === 'undefined'){
       throw new Error('مكتبة HEIC لم تحمل بعد. تأكد من اتصالك بالإنترنت.');
@@ -745,7 +775,6 @@
     }
   }
 
-  // Convert SVG to Blob via canvas
   async function convertSvgToBlob(file){
     const text = await file.text();
     const svgBlob = new Blob([text], {type: 'image/svg+xml'});
@@ -765,7 +794,6 @@
     }
   }
 
-  // Convert ICO to Blob via canvas
   async function convertIcoToBlob(file){
     const url = URL.createObjectURL(file);
     try{
@@ -783,13 +811,11 @@
     }
   }
 
-  // Generic canvas to blob with fallback
   async function canvasToBlob(canvas, mimeType, quality){
     return new Promise((resolve, reject) => {
       canvas.toBlob(blob => {
         if(blob) resolve(blob);
         else{
-          // Fallback using toDataURL
           try{
             const dataUrl = canvas.toDataURL(mimeType, quality);
             const byteString = atob(dataUrl.split(',')[1]);
@@ -808,11 +834,8 @@
     });
   }
 
-  // Pre-process file to get a displayable image URL
   async function preprocessFile(file){
     const name = file.name.toLowerCase();
-
-    // HEIC/HEIF
     if(file.type === 'image/heic' || file.type === 'image/heif' || name.endsWith('.heic') || name.endsWith('.heif')){
       try{
         const blob = await convertHeicToBlob(file);
@@ -822,8 +845,6 @@
         return { url: URL.createObjectURL(file), preprocessed: false };
       }
     }
-
-    // SVG
     if(file.type === 'image/svg+xml' || name.endsWith('.svg')){
       try{
         const blob = await convertSvgToBlob(file);
@@ -833,8 +854,6 @@
         return { url: URL.createObjectURL(file), preprocessed: false };
       }
     }
-
-    // ICO
     if(file.type === 'image/x-icon' || file.type === 'image/vnd.microsoft.icon' || name.endsWith('.ico')){
       try{
         const blob = await convertIcoToBlob(file);
@@ -844,8 +863,6 @@
         return { url: URL.createObjectURL(file), preprocessed: false };
       }
     }
-
-    // Standard image formats
     return { url: URL.createObjectURL(file), preprocessed: false };
   }
 
@@ -904,7 +921,6 @@
       showToast('الحد الأقصى ' + MAX_FILES + ' صورة', 'error');
       return;
     }
-
     for(const file of valid){
       try{
         const processed = await preprocessFile(file);
@@ -920,7 +936,6 @@
         showToast('خطأ في معالجة: ' + file.name, 'error');
       }
     }
-
     renderGrid(key, gridId, emptyId);
     refreshButtons();
     if(valid.length > 0) showToast('تمت إضافة ' + valid.length + ' صورة', 'success');
@@ -970,14 +985,12 @@
     return c;
   }
 
-  // ---- تحويل الصيغة ----
   setupDropzone('dz-convert', 'input-convert', files => addFiles('convert', files, 'grid-convert', 'empty-convert'));
 
   document.getElementById('quality').addEventListener('input', e => {
     document.getElementById('quality-val').textContent = e.target.value + '%';
   });
 
-  // Map of target formats with their extensions and fallback chains
   const FORMAT_MAP = {
     'image/png':  { ext: 'png',  fallback: null },
     'image/jpeg': { ext: 'jpg',  fallback: null },
@@ -987,7 +1000,6 @@
     'image/avif': { ext: 'avif', fallback: 'image/webp' }
   };
 
-  // Check if browser can create a given format from canvas
   async function canCreateFormat(format){
     try{
       const c = document.createElement('canvas');
@@ -997,11 +1009,10 @@
     } catch(e){ return false; }
   }
 
-  // Get the actual format to use, with fallback chain
   async function resolveFormat(requestedFormat){
     if(await canCreateFormat(requestedFormat)) return requestedFormat;
     const info = FORMAT_MAP[requestedFormat];
-    if(!info || !info.fallback) return 'image/png'; // ultimate fallback
+    if(!info || !info.fallback) return 'image/png';
     return resolveFormat(info.fallback);
   }
 
@@ -1015,15 +1026,10 @@
     const maxDim = +document.getElementById('max-dimension').value;
     const total = state.convert.length;
     let done = 0;
-    let usedFallback = false;
 
-    // Pre-resolve format once for all images (same browser = same support)
     const actualFormat = await resolveFormat(requestedFormat);
     if(actualFormat !== requestedFormat){
-      const reqName = FORMAT_MAP[requestedFormat]?.ext.toUpperCase() || requestedFormat;
-      const actName = FORMAT_MAP[actualFormat]?.ext.toUpperCase() || actualFormat;
-      showToast('متصفحك لا يدعم ' + reqName + ' — استُخدم ' + actName + ' بديلاً', 'warning');
-      usedFallback = true;
+      showToast('تم ضبط صيغة التحويل لتتوافق مع متصفحك', 'warning');
     }
 
     for(const item of state.convert){
@@ -1043,7 +1049,6 @@
         ctx.drawImage(img, 0, 0);
 
         const finalCanvas = resizeCanvas(canvas, maxDim);
-
         let blob = await canvasToBlob(finalCanvas, actualFormat, quality);
 
         if(!blob){
@@ -1055,7 +1060,6 @@
         item.blob = blob;
         item.status = 'done';
       } catch(err){
-        console.error(err);
         showToast('خطأ في تحويل: ' + item.file.name, 'error');
         item.status = 'error';
       }
@@ -1068,13 +1072,13 @@
     setProgress('progress-convert', 0);
     refreshButtons();
     if(state.convert.some(i => i.status === 'done')){
-      showToast('تم التحويل — اضغط ⬇ تحت كل صورة لتحميلها', 'success');
+      showToast('تم التحويل بنجاح', 'success');
     }
   });
 
   document.getElementById('btn-download-zip').addEventListener('click', async () => {
     if(typeof JSZip === 'undefined'){
-      showToast('مكتبة ZIP غير محملة بعد، جرّب مرة أخرى', 'error');
+      showToast('مكتبة ZIP غير محملة بعد', 'error');
       return;
     }
     const zip = new JSZip();
@@ -1106,12 +1110,11 @@
     refreshButtons();
   });
 
-  // ---- دمج PDF ----
   setupDropzone('dz-pdf', 'input-pdf', files => addFiles('pdf', files, 'grid-pdf', 'empty-pdf'));
 
   document.getElementById('btn-make-pdf').addEventListener('click', async () => {
     if(typeof window.jspdf === 'undefined' || !window.jspdf.jsPDF){
-      showToast('مكتبة PDF غير محملة بعد، جرّب مرة أخرى', 'error');
+      showToast('مكتبة PDF غير محملة بعد', 'error');
       return;
     }
 
@@ -1162,30 +1165,11 @@
         const ctx = canvas.getContext('2d');
         ctx.drawImage(img, 0, 0);
 
-        // Handle transparency by compositing on white background
-        const imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
-        const hasTransparency = imageData.data.some((v, i) => i % 4 === 3 && v < 255);
-
-        let dataUrl;
-        if(hasTransparency){
-          const tempCanvas = document.createElement('canvas');
-          tempCanvas.width = canvas.width;
-          tempCanvas.height = canvas.height;
-          const tempCtx = tempCanvas.getContext('2d');
-          tempCtx.fillStyle = '#ffffff';
-          tempCtx.fillRect(0, 0, tempCanvas.width, tempCanvas.height);
-          tempCtx.drawImage(canvas, 0, 0);
-          dataUrl = tempCanvas.toDataURL('image/jpeg', imgQuality);
-        } else {
-          dataUrl = canvas.toDataURL('image/jpeg', imgQuality);
-        }
-
+        const dataUrl = canvas.toDataURL('image/jpeg', imgQuality);
         doc.addImage(dataUrl, 'JPEG', x, y, w, h);
         added++;
         item.status = 'done';
       } catch(err){
-        console.error(err);
-        showToast('خطأ في معالجة صورة رقم ' + (i + 1), 'error');
         state.pdf[i].status = 'error';
       }
       done++;
@@ -1201,7 +1185,7 @@
         showToast('فشل حفظ PDF', 'error');
       }
     } else {
-      showToast('تعذر إنشاء PDF — لم تتم معالجة أي صورة بنجاح', 'error');
+      showToast('تعذر إنشاء PDF', 'error');
     }
     zone.classList.remove('scanning');
     btn.disabled = false;
@@ -1220,7 +1204,7 @@
 
   setupTabs();
 })();
-  <script src="https://pl30567837.effectivecpmnetwork.com/fb/59/ba/fb59ba769488e8b00513945b0001118a.js"></script>
-  <script src="https://pl30567726.effectivecpmnetwork.com/9b/5b/2c/9b5b2cb811f495ade55ee4f5b087ea13.js"></script>
+</script>
+
 </body>
 </html>
