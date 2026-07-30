@@ -1,0 +1,103 @@
+{
+  "name": "Diyaa — Free Online Image Tools",
+  "short_name": "Diyaa",
+  "description": "Convert, compress, and edit images entirely inside your browser — no file is ever uploaded",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#0b0f17",
+  "theme_color": "#e8a33d",
+  "orientation": "any",
+  "scope": "./",
+  "lang": "en",
+  "dir": "ltr",
+  "icons": [
+    {
+      "src": "images/icon-72x72.png",
+      "sizes": "72x72",
+      "type": "image/png",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "images/icon-96x96.png",
+      "sizes": "96x96",
+      "type": "image/png",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "images/icon-128x128.png",
+      "sizes": "128x128",
+      "type": "image/png",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "images/icon-144x144.png",
+      "sizes": "144x144",
+      "type": "image/png",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "images/icon-152x152.png",
+      "sizes": "152x152",
+      "type": "image/png",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "images/icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "images/icon-384x384.png",
+      "sizes": "384x384",
+      "type": "image/png",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "images/icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable any"
+    }
+  ],
+  "categories": [
+    "productivity",
+    "utilities",
+    "photo"
+  ],
+  "screenshots": [
+    {
+      "src": "images/og-image.jpg",
+      "sizes": "1120x630",
+      "type": "image/jpeg",
+      "form_factor": "wide",
+      "label": "Diyaa — Free Online Image Tools"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Images to PDF",
+      "short_name": "PDF",
+      "description": "Combine your images into a PDF file",
+      "url": "tools/image-to-pdf.html",
+      "icons": [
+        {
+          "src": "images/icon-96x96.png",
+          "sizes": "96x96"
+        }
+      ]
+    },
+    {
+      "name": "Compress Image",
+      "short_name": "Compress",
+      "description": "Shrink your image file size",
+      "url": "tools/compress-image.html",
+      "icons": [
+        {
+          "src": "images/icon-96x96.png",
+          "sizes": "96x96"
+        }
+      ]
+    }
+  ]
+}

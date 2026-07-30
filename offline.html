@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script>(function(){try{var t=localStorage.getItem('diyaa-theme');if(t!=='light'&&t!=='dark'){t='dark';}document.documentElement.setAttribute('data-theme',t);}catch(e){}})();</script>
+<title>You're Offline | Diyaa</title>
+<meta name="description" content="You're currently offline. You can keep using any Diyaa tool page you've already opened before.">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#e8a33d">
+<link rel="canonical" href="https://all5351500375-bit.github.io/diyaa-site/offline.html">
+<link rel="icon" href="images/icon-192x192.png" sizes="192x192" type="image/png">
+<link rel="icon" href="images/icon-72x72.png" sizes="72x72" type="image/png">
+<link rel="stylesheet" href="css/style.css">
+<link rel="manifest" href="manifest.json">
+<style>
+.error-page { text-align: center; padding: 80px 20px; }
+.error-code { font-size: 64px; line-height: 1; margin-bottom: 10px; }
+.error-title { font-size: 28px; margin: 20px 0 10px; }
+.error-desc { color: var(--text-muted); font-size: 17px; max-width: 500px; margin: 0 auto 30px; }
+.error-actions { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+</style>
+</head>
+<body>
+<header class="site-header">
+  <div class="header-inner">
+    <a href="index.html" class="brand">
+      <img src="images/logo.png" alt="" class="brand-mark" width="36" height="36" aria-hidden="true">
+      <span class="brand-text">Diyaa</span>
+    </a>
+    <div class="header-actions">
+      <button class="theme-toggle" type="button" aria-pressed="false" aria-label="Switch to light mode">
+        <span class="icon-dark" aria-hidden="true">🌙</span>
+        <span class="icon-light" aria-hidden="true">☀️</span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main class="main-wrapper">
+  <div class="error-page">
+    <div class="error-code" aria-hidden="true">📡</div>
+    <h1 class="error-title">You're offline</h1>
+    <p class="error-desc">
+      It looks like you're not connected right now, and this particular page hasn't been cached on your device yet.
+      You can still open any tool you've visited before — it runs entirely from your device and doesn't need a connection.
+    </p>
+    <div class="error-actions">
+      <button class="btn btn-primary" id="retry-btn">Try again</button>
+      <a href="index.html" class="btn btn-secondary">Home</a>
+    </div>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-bottom">
+      <p>Diyaa — free, private, local image tools</p>
+    </div>
+  </div>
+</footer>
+<script src="js/app.js"></script>
+</body>
+</html>

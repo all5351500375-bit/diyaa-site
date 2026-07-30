@@ -1,4 +1,31 @@
+# Robots.txt for Diyaa - Image Conversion Studio
+# https://all5351500375-bit.github.io/diyaa-site/
+
+# Allow all bots to crawl the site
 User-agent: *
 Allow: /
+Disallow: /admin/
+Disallow: /private/
+Disallow: /api/
+Disallow: /*.json$
+Crawl-delay: 1
+Request-rate: 30/60
 
+# Google Bot specific rules
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 0
+
+# Bing Bot
+User-agent: Bingbot
+Allow: /
+
+# Image crawlers
+User-agent: Googlebot-Image
+Allow: /images/
+
+User-agent: Bingbot-Image
+Allow: /images/
+
+# Sitemap location
 Sitemap: https://all5351500375-bit.github.io/diyaa-site/sitemap.xml

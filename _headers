@@ -1,0 +1,42 @@
+# ============================================================
+# Diyaa — Security headers (Netlify / Cloudflare Pages format)
+# These apply automatically on Netlify and Cloudflare Pages.
+# For Apache hosting, see .htaccess instead (same policy, mirrored).
+# ============================================================
+
+/*
+  # Only the theme-init inline script (identical on every page, matched
+  # by its exact hash below) may run inline. Everything else must be a
+  # same-origin file — no external scripts, no third-party JS at all.
+  # NOTE: this ad network (highperformanceformat.com) is allowed here for
+  # script-src/frame-src/img-src/connect-src. Ad networks sometimes serve
+  # creatives from additional rotating subdomains — if an ad silently fails
+  # to render on a host that enforces this file (Netlify/Cloudflare Pages),
+  # check the browser console for a CSP violation naming the blocked domain
+  # and add it below. This file has no effect on GitHub Pages, which does
+  # not support custom response headers at all.
+  Content-Security-Policy: default-src 'none'; script-src 'self' 'sha256-8o1My12Rgvpl/NyD+/N1mHZLQ6HZcB+xY6l5ESqkkJo=' 'sha256-zwPNZZQjgsZLZKwo8UqXaJs4ELT3Dc2fIfQLj0fFgmA=' https://www.highperformanceformat.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob: https://www.highperformanceformat.com; font-src 'self'; connect-src 'self' https://www.highperformanceformat.com; frame-src https://www.highperformanceformat.com; manifest-src 'self'; worker-src 'self'; base-uri 'self'; form-action 'self' mailto:; frame-ancestors 'none'; object-src 'none'; upgrade-insecure-requests
+  X-Content-Type-Options: nosniff
+  X-Frame-Options: DENY
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: camera=(), microphone=(), geolocation=(), payment=(), usb=(), interest-cohort=()
+  Strict-Transport-Security: max-age=63072000; includeSubDomains; preload
+  Cross-Origin-Opener-Policy: same-origin
+  Cross-Origin-Resource-Policy: same-origin
+  X-XSS-Protection: 0
+
+/sw.js
+  Cache-Control: no-cache
+  Service-Worker-Allowed: /
+
+/manifest.json
+  Content-Type: application/manifest+json
+
+/css/*
+  Cache-Control: public, max-age=3600, must-revalidate
+
+/js/*
+  Cache-Control: public, max-age=3600, must-revalidate
+
+/images/*
+  Cache-Control: public, max-age=604800
